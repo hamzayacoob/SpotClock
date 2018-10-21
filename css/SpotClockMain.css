@@ -83,3 +83,41 @@ li a:hover {
 .active {
     background-color: #4CAF50;
 }
+
+.btntosetcurrent, .btntosetdest{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color:#fff;
+    border:3px solid #fff;
+    padding:10px;
+    width:140px;
+    text-align:center;
+    margin:0 auto;
+    margin-top:30px;
+    margin-bottom: 60px;
+    cursor:pointer;
+}
+.getCurrent, .getDest{
+    border:none;
+    background:transparent;
+    outline:none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size:25px;
+    color:#eee;
+    border-bottom:1px solid #eee;
+    width:200px;
+    margin-top:5px;
+    text-align:center;
+}
+
+.inputText{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    color:#efefef;
+    font-size:30px;
+    text-align:center;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzTMj6Fy4dchPDyEzGV_Gl2HAHafHaEUU&callback=initMap">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    google.maps.event.addDomListener(window, "load", function () {
+        var map = new google.maps.Map(document.getElementById("map"), {
+            center: new google.maps.LatLng(55.53, 9.4),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var origin1 = 'Miami, Florida';
+        var destinationA = 'Dallas, Texas';
+
+        var service = new google.maps.DistanceMatrixService;
+        service.getDistanceMatrix({
+            origins: [origin1],
+            destinations: [destinationA],
+            travelMode: google.maps.TravelMode.DRIVING,
+            unitSystem: google.maps.UnitSystem.IMPERIAL,
+            avoidHighways: false,
+            avoidTolls: false
+        }, function(response, status) {
+            if (status !== google.maps.DistanceMatrixStatus.OK) {
+                alert('Error was: ' + status);
+                return;
+            }
+            var originList = response.originAddresses;
+            var destinationList = response.destinationAddresses;
+            var output = document.getElementById("output");
+            output.innerHTML = "";
+
+            for (var i = 0; i < originList.length; i++) {
+                var results = response.rows[i].elements;
+                for (var j = 0; j < results.length; j++) {
+                    output.innerHTML += originList[i] + ' to ' + destinationList[j] +
+                        ': ' + results[j].distance.text + ' in ' +
+                        results[j].duration.text + '<br>';
+                }
+            }
+        });
+    });
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="css/SpotClockMain.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <ul>
+        <li><a href="SpotClock Main.html">Home</a></li>
+        <li><a class="active" href="#news">Navigation</a></li>
+        <li><a href="#contact">Sleep Groups</a></li>
+    </ul>
+    <div id="map"></div>
+    <div id="output"></div>
+
+
+<div class = "navigation_main">
+    <div class = "inputText" > Input your current location</div>
+       <center> <input class="getCurrent" type="text" placeholder="Current Location"/> </center>
+    <div class="btntosetcurrent">Set Current</div>
+</div>
+
+<div class = "navigation_main">
+    <div class = "inputText" > Input your destination</div>
+    <center> <input class="getDest" type="text" placeholder="Destination"/> </center>
+    <div class="btntosetdest">Set Destination</div>
+</div>
+
+</body>
+</html>

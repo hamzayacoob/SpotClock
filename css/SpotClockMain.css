@@ -1,3 +1,8 @@
+#weatherWidget {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
 #clock-wrapper{
     font-family: 'Roboto';
     font-style: normal;
@@ -5,12 +10,11 @@
     font-size:180px;
     color:#fff;
     text-align:center;
-    margin-top:20px;
 }
 body{
     background:url("http://themes.fastwp.net/wisten/wp-content/uploads/2014/04/12.jpg") center center no-repeat fixed;
 }
-.txtoftime, .when-alrm-ring{
+.txtoftime, .when-alrm-ring, label{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -18,25 +22,32 @@ body{
     font-size:60px;
     text-align:center;
 }
-.getalarmtime{
+label {
+    font-size: 20px;
+}
+.getalarmtime, #location, input[type=text]{
     border:none;
     background:transparent;
     outline:none;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size:30px;
+    font-size:25px;
     color:#eee;
     border-bottom:1px solid #eee;
-    width:100px;
+    width:65%;
     margin-top:20px;
     text-align:center;
 }
-.btntosetalrm{
+#location {
+    width: 120px;
+    font-size:20px;
+}
+.btntosetalrm, input[type=submit], button{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    color:#fff;
+    color:#333;
     border:3px solid #fff;
     padding:10px;
     width:140px;
@@ -51,4 +62,9 @@ body{
 }
 .when-alrm-ring{
     display:none;
+}
+
+body {
+    color: white;
+    text-align: center;
 }

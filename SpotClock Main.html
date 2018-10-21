@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>SpotClock</title>
-    <link rel="stylesheet" href="css/SpotClockMain.css">
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+    <!-- maps api -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzTMj6Fy4dchPDyEzGV_Gl2HAHafHaEUU&callback=initMap">
+	</script>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- bootstrap v4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- custom scripts -->
+    <script src="js/SpotClockMain.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/SpotClockMain.css">
 </head>
 <body>
-<div id="clock-wrapper"></div>
-<audio class="audioDemo">
-    <source src="Beep_5.mp3">
-</audio>
-<div class="alrm-main"> <div class="txtoftime">Input Alarm Time</div>
-    <center>  <input class="getalarmtime" type="text" placeholder="12:10"/></center>
-    <div class="btntosetalrm">Set Alarm</div>
-</div>
-<div class="when-alrm-ring">The alarm will ring at <span class="aumkar"></span></div>
-<br/>
-<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="js/SpotClockMain.js"></script>
+	<h1 class="display-1">SpotClock</h1>
+
+	<!-- main content -->
+	<div>
+		<!-- time display -->
+		<div id="clock-wrapper"></div>
+		<!-- time result -->
+		<div id="output"></div>
+		<div id="map"></div>
+
+		<div>
+			<!-- user inputs -->
+			<form>
+				<div class="container-fluid">
+
+					<div class="row">
+						<div class="col-md">
+							<h3>Origin</h3>
+							<input type="text" name="origin" id="origin">
+						</div>
+						<div class="col-md">
+							<h3>Destination</h3>
+							<input type="text" name="dest" id="dest">
+						</div>
+						<div class="col-md">
+							<h3>Get ready time (in min)</h3>
+							<input type="text" name="ready" id="ready">
+						</div>
+						<div class="col-md">
+							<h3>Time leaving (in 24hr)</h3>
+							<input type="text" name="leave" id="leave">
+						</div>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+		
+	</div>
+	<button class="btn btn-light" type="button" id="target">Calculate!</button>
 </body>
 </html>

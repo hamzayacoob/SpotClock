@@ -32,8 +32,6 @@ setInterval(function() {
 
     if(awesome === cuttime){
         $(".audioDemo").trigger('play');
-        console.log("AUDIO SHOULD PLAY!!!!!")
     }
 
 }, 500);
-

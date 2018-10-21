@@ -1,0 +1,71 @@
+#clock-wrapper{
+     font-family: 'Roboto';
+     font-style: normal;
+     font-weight: 900;
+     font-size:180px;
+     color:#fff;
+     text-align:center;
+     margin-top:20px;
+ }
+
+body{
+    background:url("http://themes.fastwp.net/wisten/wp-content/uploads/2014/04/12.jpg") center center no-repeat fixed;
+}
+
+#song-selector{
+    text-align:center;
+    margin:0 auto;
+    padding:0.5em;
+}
+#selected-song {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    color: #efefef;
+    font-size: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.txtoftime, .when-alrm-ring{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    color:#efefef;
+    font-size:60px;
+    text-align:center;
+}
+.getalarmtime{
+    border:none;
+    background:transparent;
+    outline:none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size:30px;
+    color:#eee;
+    border-bottom:1px solid #eee;
+    width:100px;
+    margin-top:20px;
+    text-align:center;
+}
+.btntosetalrm{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color:#fff;
+    border:3px solid #fff;
+    padding:10px;
+    width:140px;
+    text-align:center;
+    margin:0 auto;
+    margin-top:30px;
+    cursor:pointer;
+}
+.btntosetalrm:hover{
+    color:#000;
+    background:#fff;
+}
+.when-alrm-ring{
+    display:none;
+}

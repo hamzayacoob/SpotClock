@@ -1,0 +1,34 @@
+{
+  "name": "spotclock",
+  "version": "1.0.0",
+  "description": "This app helps users use Spotify music as alarms",
+  "main": "SpotClockMain.js",
+  "scripts": {
+    "test": "console.log(\"Hey\");"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamzayacoob/SpotClock.git"
+  },
+  "keywords": [
+    "alarms",
+    "spotify",
+    "music"
+  ],
+  "author": "Sam Mathew, Sandeep Singh, Hamza Yacoob",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/hamzayacoob/SpotClock/issues"
+  },
+  "homepage": "https://github.com/hamzayacoob/SpotClock#readme",
+  "dependencies": {
+    "bower": "^1.8.4",
+    "bundle-js": "^1.0.2",
+    "jquery": "^3.3.1",
+    "request": "^2.88.0",
+    "require": "^2.4.20",
+    "soundcloud": "^3.3.0",
+    "spotify-web-api-js": "^1.1.1",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}

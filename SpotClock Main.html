@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SpotClock</title>
+    <link rel="stylesheet" href="SpotClockMain.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="clock-wrapper"></div>
+
+<div class="alrm-main"> <div class="txtoftime">Input Alarm Time</div>
+    <center>  <input class="getalarmtime" type="text" placeholder="12:10"/></center>
+</div>
+<div class="dropdown" id="song-selector">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu" id="drop-menu">
+        <li><a href="#">Normal Alarm Sound</a></li>
+        <li><a href="#">Tropical Alarm</a></li>
+        <li><a href="#">Beep</a></li>
+    </ul>
+</div>
+<div id="selected-song">Selected Song is </div>
+<div class="btntosetalrm">Set Alarm</div>
+<div class="when-alrm-ring">The alarm will ring at <span class="aumkar"></span></div>
+
+<button type="button" class="btn btn-primary">Click</button>
+
+<br/>
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="SpotClockMain.js"></script>
+</body>
+</html>
